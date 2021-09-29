@@ -3,7 +3,7 @@
     "declaration": true,
     "declarationMap": true,
     "incremental": true,
-    "module": "ES6",
+    "module": "CommonJS",
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "outDir": "./dist",
