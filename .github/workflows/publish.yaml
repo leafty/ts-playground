@@ -6,7 +6,7 @@ on:
     types: [created]
 
 jobs:
-  'Build and Test':
+  build:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
@@ -22,8 +22,8 @@ jobs:
       - name: Run tests
         run: yarn test
 
-  'Publish to npmjs.org':
-    needs: 'Build'
+  publish-npm:
+    needs: build
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout repository
@@ -41,8 +41,8 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
-  'Publish to GitHub Packages':
-    needs: 'Build'
+  publish-gpr:
+    needs: build
     runs-on: ubuntu-20.04
     permissions:
       contents: read
