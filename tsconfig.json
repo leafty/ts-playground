@@ -4,6 +4,8 @@
     "declarationMap": true,
     "incremental": true,
     "module": "ES6",
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
     "outDir": "./dist",
     "removeComments": true,
     "sourceMap": true,
