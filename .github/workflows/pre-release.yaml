@@ -35,33 +35,7 @@ jobs:
           scope: '@leafty'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Bump version
-        run: yarn version --prerelease
       - name: Publish
         run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
-  publish-gpr:
-    needs: build
-    runs-on: ubuntu-20.04
-    permissions:
-      contents: read
-      packages: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Use Node.js LTS
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-          registry-url: $registry-url(npm)
-          scope: '@leafty'
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-      - name: Bump version
-        run: yarn version --prerelease
-      - name: Publish
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
