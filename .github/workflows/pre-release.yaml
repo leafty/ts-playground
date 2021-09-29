@@ -35,6 +35,8 @@ jobs:
           scope: '@leafty'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
+      - name: Build package
+        run: yarn build
       - name: Publish
         run: npm publish --access=public
         env:
