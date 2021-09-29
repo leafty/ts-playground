@@ -1,6 +1,6 @@
 {
   "name": "@leafty/ts-playground",
-  "version": "0.1.3-0",
+  "version": "0.1.3-1",
   "description": "Re-learning how to make npm packages from a GitHub project",
   "author": "Johann-Michael Thiebaut <johann.thiebaut@gmail.com>",
   "license": "MIT",
