@@ -35,8 +35,6 @@ jobs:
           scope: '@leafty'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Bump version
-        run: yarn version --prerelease
       - name: Publish
         run: npm publish --access=public
         env:
@@ -59,8 +57,6 @@ jobs:
           scope: '@leafty'
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Bump version
-        run: yarn version --prerelease
       - name: Publish
         run: npm publish
         env:
